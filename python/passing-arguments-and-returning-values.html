@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passing arguments and returning values</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../python/style.css">
+</head>
+<body>
+    
+    <!--============/ first section /==============  -->
+    <section class="headers" id="headbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <div class="row pt-5 pb-5">
+                <div class="col-md-12">
+                    <h1>Passing argument & returning values</h1>
+                    <p>Let's learn this topic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="art" id="art">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pt-5">
+                    <div class="card" style="100%">
+                        <div class="card-body">
+                          <p>
+                              <b>Argument Passing:</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> m = [9, 15, 24]
+>>> def modify(k):
+        k.append(39)
+        print("k =", k)
+
+        
+>>> modify(m)
+k = [9, 15, 24, 39]
+>>> m
+[9, 15, 24, 39]
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                              <b>Argument passing semantics</b>
+                          </p>
+                          <p>
+                              <img src="../img/argument passing semantics.png" alt="">
+                          </p>
+                          <br>
+                          <p>
+                            <b>Replacing argument value</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> f = [14, 23, 37]
+>>> def replace(g):
+        g = [17, 28, 45]
+        print("g = ", g)
+
+        
+>>> replace(f)
+g =  [17, 28, 45]
+>>> f
+[14, 23, 37]
+                              </code>
+                          </pre>
+                          <p>
+                              <img src="../img/replacing argument value.png" alt="">
+                          </p>
+                          <br>
+                          <p>
+                              <b>Mutable Arguments</b>
+                          </p>
+                          <br>
+                          <pre>
+                              <code class="cod">
+
+>>> def replace_contents(g):
+g[0] = 17
+g[1] = 28
+g[2] = 45
+print("g = ", g)
+
+
+>>> f = [14, 23, 37]
+>>> replace_contents(f)
+g =  [17, 28, 45]
+>>> f
+[17, 28, 45]
+                              </code>
+                          </pre>
+                          <p>
+                              <b>
+                                  Return Semantics
+                              </b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> def f(d):
+return d
+
+>>> c = [ 6, 10, 16 ]
+>>> e = f(c)
+>>> c is e
+True
+                              </code>
+                          </pre>
+                    
+                          <!-- <a href="../index.html" class="btn btn-warning">Go home</a> -->
+                          
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =============/ Writter seection /============= -->
+
+    <section class="writter mt-5 mb-5" id="writter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 wrt">
+                    <img src="../img/writter.jpg" alt="">
+                </div>
+                <div class="col-md-3 mt-3">
+                    <h5 class="">Torikus Sadik</h5>
+                    <p>Computer Programmer</p>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
