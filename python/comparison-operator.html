@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operator</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../python/style.css">
+</head>
+<body>
+    
+    <!--============/ first section /==============  -->
+    <section class="headers" id="headbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <div class="row pt-5 pb-5">
+                <div class="col-md-12">
+                    <h1>Comparison operator</h1>
+                    <p>Let's learn about comparison operators...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="art" id="art">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pt-5">
+                    <div class="card" style="100%">
+                        <div class="card-body">
+                          <p>
+                            এ পর্বে আমরা জানব কিছু তুলনা মূলক অপারেটর সম্পর্কে। তাহলে শুরু করি চলো,
+                          </p>
+                          <p>
+                            <b>Equal to:</b>
+                          </p>
+                          <p>
+                            এই অপারেটর সম্পর্কে তোমাকে বলার আগে আমি একটি প্রোগ্রাম লিখি তাহলে তোমার বোঝার সুবিধে হবে। 
+                          </p>
+                          <pre>
+                              <code class="cod">
+>>> 42 == 42
+True
+                                
+                              </code>
+                          </pre>
+                          <p>
+                            উপরের প্রোগ্রামে খেয়াল করো, ৪২ ইকুয়াল টু ৪২। দুটা নাম্বার সমান হওয়াতে  আউটপুট True  প্রদর্শিত হয়েছে।
+                            এবার তোমাকে একটা কাজ দেই। তুমি 42 এর স্থানে 43 লিখে প্রোগ্রাম রান করো। তাহলে পার্থক্য বুঝতে পারবে।
+                            
+                          </p>
+                          <br>
+                          <p>
+                              <b>Not equal to:</b>
+                          </p>
+                          <pre><code class="pre">
+>>> 3 != 3
+False
+                            
+                          </code></pre>
+                          <p>
+                            এই প্রোগ্রামের প্রথম লাইনে বলা হয়েছে প্রথম ৩ দ্বিতীয় ৩ এর সমান নয়। অথচ দুটো তিন ই সমান। তাই প্রোগ্রামের আউটপুট False আসছে।
+                            এবার আরেকটি উদাহরণ দেখা যাকঃ
+                            
+                          </p>
+                          <pre>
+                              <code class="cod">
+>>> 2 != 3
+True
+                                
+                              </code>
+                          </pre>
+                          <p>
+                            এখানে উপরের প্রোগ্রামে 2 ছোট এবং 3 বড়।  তাই প্রোগ্রাম টি সত্য।
+                          </p>
+                          <br>
+                          <p>
+                              <b>Less than:</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+>>> 45 < 50
+True
+                                
+                              </code>
+                          </pre>
+                          <p>
+                            উপরের প্রোগ্রামে ৪৫ ছোট এবং ৫০ বড় তাই প্রোগ্রাম টি সঠিক। প্রোগ্রাম টি সঠিক হওয়াতে আমরা True আউটপুট পেয়েছি।
+                          </p>
+                          <br>
+                          <p>
+                              <b>Greater than</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+>>> 50 > 45
+True
+                                
+                              </code>
+                          </pre>
+                          <p>
+                            উপরের প্রোগ্রামে ৫০ বড় এবং ৪৫ ছোট হওয়ায় প্রোগ্রামটি সঠিক এবং তাই True প্রিন্ট হয়েছে।
+                          </p>
+                          <br>
+                          <p>
+                              <b>Less than or equal to:</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+>>> eggprice = 32
+>>> eggprice <= 32
+True
+                                
+                              </code>
+                          </pre>
+                          <p>
+                            উপরের প্রোগ্রামে প্রথম লাইনে আমরা একটি ভেরিয়েবল নিয়েছি যেখানে ডিমের দাম সেট করে দিয়েছি ৩২ টাকা। এবং দ্বীতিয় লাইনে বলে দিয়েছি ডিমের দাম ৩২ এর নিচে অথবা ৩২ এর সমান।
+                          </p>
+                          <br>
+                          <p>
+                              <b> Greater than or equal to</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+>>> age = 20
+>>> age >= 15
+True
+                              </code>
+                          </pre>
+                          <p>
+                            উপরের প্রোগ্রামে প্রথম লাইনে আমরা একটি ভেরিয়েবল নিয়েছি যেখানে আমার বয়স সেট করেছি ২০ বছর। পরের লাইনে বলে দিলাম যে আমার বয়স ২০ অথবা ২০ এর সমান।
+                          </p>
+
+
+                          <!-- <a href="../index.html" class="btn btn-warning">Go home</a> -->
+                          
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =============/ Writter seection /============= -->
+
+    <section class="writter mt-5 mb-5" id="writter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 wrt">
+                    <img src="../img/writter.jpg" alt="">
+                </div>
+                <div class="col-md-3 mt-3">
+                    <h5 class="">Torikus Sadik</h5>
+                    <p>Computer Programmer</p>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

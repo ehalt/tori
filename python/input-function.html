@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input( ) function</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../python/style.css">
+</head>
+<body>
+    
+    <!--============/ first section /==============  -->
+    <section class="headers" id="headbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <div class="row pt-5 pb-5">
+                <div class="col-md-12">
+                    <h1>input() Function</h1>
+                    <p>let's learn input() function in detail...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="art" id="art">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pt-5">
+                    <div class="card" style="100%">
+                        <div class="card-body">
+                          <p>
+                              <b>input() function</b>
+                          </p>
+                          <p>
+                            এবার আমরা জানবো input() ফাংশন সম্পর্কে। ইনপুট আউটপুট সম্পর্কে সম্ভবত তোমার অনেক ভাল ধারণা আছে। চলো তোমার ধারণা ব্যবহার করে প্রোগ্রামিং করি। যদিও তুমি ইনপুট সম্পর্কে জানো তবুও তোমাকে আমি একটু বলি , ইনপুট মানে হচ্ছে কোন কিছুর নির্দেশ দেয়া। 
+                          </p>
+                          <p>
+                            এর আগে তুমি ভেরিয়েবলে স্পেসিফিক ভ্যালু সেট করে প্রোগ্রাম রান করেছো। কিন্তু তুমি চাইলে ব্যবহারকারীর কাছে থেকেও ভ্যালু টা ইনপুট নিতে পারো। বিষয় টা সহজ করবার জন্য চলো একটা প্রোগ্রাম লিখি।
+                          </p>
+                          <p>
+                              <pre><code class="cod">
+A = input(‘Enter your 1st value here: ’)
+B = input(‘Enter your 2nd value here: ’)
+Total = A + B
+print(Total)
+                                
+                              </code></pre>
+                          </p>
+                          <p>
+                            আউটপুট কি পেলে? যোগফল বের  না হয়ে দুটো ভ্যালু একসাথে হয়ে প্রিন্ট হলো!! আজব ত! তাই না?
+                            আসলে এখানে একটা ব্যাপার আছে। তুমি যখন ইনপুট ফাংশন ব্যবহার করবে তখন তোমাকে একটা জিনিস মনে রাখতে হবে যে তুমি আসলে কি ইনপুট নিতে চাও মানে, তুমি স্ট্রিং টাইপ নিবে নাকি ইন্টিজার টাইপ ইনপুট নিবে ; নাকি ফ্লোটিং টাইপ ইনপুট নিবে।
+                            
+                          </p>
+                          <p>
+                            ব্যাপার টা আরো একটু খোলাসা করি আসো। তুমি যদি শুধু মাত্র input() ফাংশন ব্যবহার করো তাহলে ইনপুট ফাংশনের মধ্যে যা লিখবে তাই হয়ে যাবে স্ট্রিং টাইপের ডেটা। সে জন্যই উপরের প্রোগ্রামে সঠিক যোগফল টা না এসে দুটো স্ট্রিং হিসেবে যোগ হয়ে যাবে। 
+                          </p>
+                          <p>
+                            তুমি এর আগে বাজার খরচের টোটাল বের করবার জন্য একটা প্রোগ্রাম লিখেছিলে মনে আছে?
+                            আগের প্রোগ্রামটিতে input() ফাংশন ব্যবহার করি চলো।
+                            
+                          </p>
+                          <p>
+                              <pre>
+                                  <code class="cod">
+A = int(input('Alur dam: '))
+B = int(input('Beguner dam: '))
+C = int(input('Dherosher dam: '))
+Total = A + B + C
+print(Total)
+                                    
+                                  </code>
+                              </pre>
+                          </p>
+                          <p>
+                            উপরের প্রোগ্রামে আলু বেগুন এবং ঢেড়শের মান গুলো তুমি একে একে ইনপুট নিলে এবং সেগুলোর যোগফল বের করবার ব্যবস্থা করলে একটি Total ভ্যারিয়েবলের মাধ্যমে। তারপর রেজাল্ট পাবার জন্য শেষে একটি আউটপুট ফাংশন print() ব্যবহার করলে। 
+                          </p>
+                          <p>
+                            খেয়াল করো, এই প্রোগ্রামে কিন্তু তুমি int() নামের কিছু একটা দেখতে পাচ্ছো। আসলে আমরা যখন   আমাদের প্রোগ্রামে ইন্টিজার টাইপের ভ্যালু ইনপুট নিব তখন int() ব্যবহার করতে হয়। 
+                          </p>
+                          <p>
+                            চলো তোমাকে একটা কাজ দেই, তুমি একটি ভেরিয়েবলে একজন মানুষের নাম ইনপুট নিবে। তারপর আরেকটি ভেরিয়েবলে তার পছন্দের কালার কি তা ইনপুট নিবে। এবং পরিশেষে ভেরিয়েবল দুটি প্রিন্ট করবে।
+                          </p>
+                          <p>
+                            তুমি একবার চেষ্টা করে পারলে অনেক ভাল আর যদি না পারো তাহলে সমস্যা নেই অন্তত তুমি চেষ্টা টুকু করেছো। 
+                          </p>
+                          <p>
+                            এবার চলো উপরের প্রশ্নের উত্তর জেনে নেই,
+                          </p>
+                          <p>
+                              <pre>
+                                  <code class="cod">
+Var1 = input('What is your name? :')
+Var2 = input('What is your Favourite color? :')
+print(Var1 + Var2)
+                                    
+                                  </code>
+                              </pre>
+                          </p>
+                          <p>
+                            তুমি চাইলে প্রোগ্রামটি অন্যভাবেও লিখতে পারো। চলো দেখি,
+                          </p>
+                          <p>
+                              <pre>
+                                  <code class="cod">
+Var1 = input('What is your name? :')
+Var2 = input('What is your Favourite color? :')
+print(Var1 + ' likes ' + Var2)
+                                    
+                                  </code>
+                              </pre>
+                          </p>
+                          <p>
+                            এবার প্রোগ্রাম টি একটু দৃষ্টিনন্দন হলো তাই না? 
+                          </p>
+
+
+
+
+
+
+
+                          <!-- <a href="../index.html" class="btn btn-warning">Go home</a> -->
+                          
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =============/ Writter seection /============= -->
+
+    <section class="writter mt-5 mb-5" id="writter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 wrt">
+                    <img src="../img/writter.jpg" alt="">
+                </div>
+                <div class="col-md-3 mt-3">
+                    <h5 class="">Torikus Sadik</h5>
+                    <p>Computer Programmer</p>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

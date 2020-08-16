@@ -1,0 +1,20 @@
+
+
+#headbg{
+    background-color: #EDFAF5;
+}
+
+.card{
+    border:none;
+}
+
+.wrt img{
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.cod{
+    color: teal;
+    float: left;
+}

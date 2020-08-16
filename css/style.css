@@ -1,0 +1,30 @@
+
+
+
+
+
+/* ===========/ logo operation /=========== */
+.logo{
+    font-weight: bold;
+}
+
+.headerbg{
+    background-color;
+    width: 100%;
+}
+/* container color  */
+
+.c1bg {
+    background-color: #21B472;
+}
+
+.scol{
+    background-color: #217956;
+    height:20px;
+}
+.covimg{
+    height: 450px;
+    width:100%;
+    border-radius: 30px;
+}
+/* -------- cards ---------- */
