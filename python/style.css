@@ -7,6 +7,9 @@
 .card{
     border:none;
 }
+.card-body img{
+    width:100%;
+}
 
 .wrt img{
     width:80px;
