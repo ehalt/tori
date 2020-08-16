@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arguments</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../python/style.css">
+</head>
+<body>
+    
+    <!--============/ first section /==============  -->
+    <section class="headers" id="headbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <div class="row pt-5 pb-5">
+                <div class="col-md-12">
+                    <h1>Function Arguments</h1>
+                    <p>Let's learn about function arguments...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="art" id="art">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pt-5">
+                    <div class="card" style="100%">
+                        <div class="card-body">
+                          <p>
+                              <b>Default argument values</b>
+                          </p>
+                          <code  class="cod">
+                            def banner(message, border = '_'):
+                          </code>
+                          <br>
+                          <br>
+
+                          <p>
+                            এই ফাংশনে দুটি Arguments আছে। প্রথমটি message, এবং দ্বিতীয়টি হচ্ছে border 
+                            এখানে border আর্গুমেন্টে একটি ডিফল্ট ভ্যালু সেট করা আছে যা ‘ _ ‘                             
+                          </p>
+                          <p>
+                              <q> <b>Note: </b>Arguments with default values must come after those without default values.</q>
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> def banner(message, border='_'):
+line = border * len(message)
+print(line)
+print(message)
+print(line)
+
+
+>>> banner("Torikus Sadik")
+_____________
+Torikus Sadik
+_____________
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                            আরেকটি উদাহরণ প্রোগ্রামঃ
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> def banner(message, border='_'):
+line = border * len(message)
+print(line)
+print(message)
+print(line)
+
+
+>>> banner("Torikus Sadik")
+_____________
+Torikus Sadik
+_____________
+>>> banner("Torikus sadik", "*")
+*************
+Torikus sadik
+*************
+
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                              আরো একটি উদাহরণ প্রোগ্রামঃ
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> def banner(message, border='_'):
+line = border * len(message)
+print(line)
+print(message)
+print(line)
+
+
+>>> banner("Torikus Sadik")
+_____________
+Torikus Sadik
+_____________
+>>> banner("Torikus sadik", "*")
+*************
+Torikus sadik
+*************
+>>> banner("Torikus Sadik", border="/")
+/////////////
+Torikus Sadik
+/////////////
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                           উপরের প্রোগ্রামে মেসেজ স্ট্রিং বা Torikus sadik হচ্ছে  positional Argument এবং border string বা border=”/” হচ্ছে keyword argument.
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> def banner(message, border='_'):
+line = border * len(message)
+print(line)
+print(message)
+print(line)
+
+
+>>> banner("Torikus Sadik")
+_____________
+Torikus Sadik
+_____________
+>>> banner("Torikus sadik", "*")
+*************
+Torikus sadik
+*************
+>>> banner("Torikus Sadik", border="/")
+/////////////
+Torikus Sadik
+/////////////
+>>> banner(border=".", message="Hey, Torikus sadik")
+..................
+Hey, Torikus sadik
+..................
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                              <b>Default value Evaluation:</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> import time
+>>> time.ctime()
+'Sun Aug 16 15:16:54 2020'
+                              </code>
+                          </pre>
+                          <br> 
+                          <pre>
+                              <code class="cod">
+
+>>> import time
+>>> def show_default(arg=time.ctime()):
+        print(arg)
+
+        
+>>> show_default()
+Sun Aug 16 15:21:06 2020
+                              </code>
+                          </pre>
+                          <br>
+                          <pre>
+                              <code class="cod">
+
+    >>> def add_spam(menu=[]):
+    menu.append("spam")
+    return menu
+
+>>> breakfast = ['bacon','eggs']
+>>> add_spam(breakfast)
+['bacon', 'eggs', 'spam']
+                              </code>
+                          </pre>
+                          <br>
+                          <pre>
+                              <code class="cod">
+
+>>> def add_spam(menu=[]):
+menu.append("spam")
+return menu
+
+>>> breakfast = ['bacon','eggs']
+>>> add_spam(breakfast)
+['bacon', 'eggs', 'spam']
+>>> lunch = ['baked beans']
+>>> add_spam(lunch)
+['baked beans', 'spam']
+                              </code>
+                          </pre>
+                          <br>
+                          <pre>
+                              <code class="cod">
+
+>>> def add_spam(menu=[]):
+menu.append("spam")
+return menu
+
+>>> breakfast = ['bacon','eggs']
+>>> add_spam(breakfast)
+['bacon', 'eggs', 'spam']
+>>> lunch = ['baked beans']
+>>> add_spam(lunch)
+['baked beans', 'spam']
+>>> add_spam()
+['spam']
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                            নিচের প্রোগ্রামে একটি মজার বিষয় খেয়াল করিঃ
+                          </p>
+                          <br>
+                          <pre>
+                              <code class="cod">
+
+>>> def add_spam(menu=[]):
+menu.append("Spam")
+return menu
+
+>>> add_spam()
+['Spam']
+>>> add_spam()
+['Spam', 'Spam']
+>>> add_spam()
+['Spam', 'Spam', 'Spam']
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                            এই প্রোগ্রামে যতবার add_spam() কে কল করার হয়েছে লিস্ট তত বড় হয়ে চলেছে। এই প্রবলেমের সলিউশন এবার জানা জাক।
+                          </p>
+                          <p>
+                              <b>immutable default value</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> def add_spam(menu = None):
+if menu is None:
+        menu = []
+menu.append('spam')
+return menu
+
+>>> add_spam()
+['spam']
+>>> add_spam()
+['spam']
+>>> add_spam()
+['spam']
+                              </code>
+                          </pre>
+
+                          <!-- <a href="../index.html" class="btn btn-warning">Go home</a> -->
+                          
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =============/ Writter seection /============= -->
+
+    <section class="writter mt-5 mb-5" id="writter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 wrt">
+                    <img src="../img/writter.jpg" alt="">
+                </div>
+                <div class="col-md-3 mt-3">
+                    <h5 class="">Torikus Sadik</h5>
+                    <p>Computer Programmer</p>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
