@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects and Types</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../python/style.css">
+</head>
+<body>
+    
+    <!--============/ first section /==============  -->
+    <section class="headers" id="headbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <div class="row pt-5 pb-5">
+                <div class="col-md-12">
+                    <h1>Objects and Types</h1>
+                    <p>Let's learn something about objects and types</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="art" id="art">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pt-5">
+                    <div class="card" style="100%">
+                        <div class="card-body">
+                          <p>
+                            x = 1000 <br>
+                            x = 500 <br>
+                          </p>
+                          <p>
+                            প্রথমে দুটি ভেরিয়েবল নিয়েছি। মজার ব্যাপার হলো দুটো ভেরিয়েবল ই সেইম। আর তুমি হয়ত জানোই যে, প্রতিটি ভেরিয়েবল ই অব্জেক্ট হিসেবে ধরা যায়। সেক্ষেত্রে চিন্তা করলে উপরে দুটো সেইম অব্জেক্ট রয়েছে।
+                            চলো এবার প্রোগ্রাম লেখা যাকঃ
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> x = 1000
+>>> x = 500
+>>> print(x)
+500
+                              </code>
+                          </pre>
+                          <p>
+                            তুমি নিশ্চই চিন্তা করছো কি ব্যাপার!! এরকম আউটপুট আসলো কেন? x এর মান ত প্রথমে দেয়া আছে 1000 তাহলে x এর মান 500 কেন print হলো?! এরকম চিন্তা করাটা স্বাভাবিক। তোমার চিন্তার প্রসেস টা একটু বাড়িয়ে দেই। কম্পাইলার / ইন্টারপ্রেটার আসলে লাইন বাই লাইন এক্সিকিউশনের কাজ করে থাকে। সে দেখে প্রথম লাইনে কি আছে? তারপর দেখে দ্বিতীয় লাইনে কি আছে? এভাবে চলতে থাকে। 
+                          </p>
+                          <br>
+                          <p>
+                            এবার চলো দেখে নেই কম্পাইলার/ইন্টারপ্রেটার এই প্রোগ্রামের সাথে কি কি করেছে। যেহেতু >>> আছে প্রোগ্রামে সেহেতু এটা ইন্টারপ্রেটারের কাজ। কম্পাইলারে >>> থাকে না। যাহোক, এখানে ইন্টারপ্রেটার প্রথমে দেখবে x = 1000 তারপর দেখবে আবার x এর মান 500 তারপর একটি print() ফাংশন দেখতে পারবে সে। আর তাই সে print() এর মধ্যে কিছু আছে কি না তা দেখে নিবে। সে দেখল print(x) অর্থাৎ x এর মান সে প্রিন্ট করবে। সে লাস্ট অব্দি x এর মান পেয়েছে 500 তাই আউটপুট হিসেবে 500 প্রদর্শন করবে। কথা একটু বেশি হয়ে গেল। তুমি চাইলে আরো সহজ কোন উদাহরণ ভাবতে পারো।
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> x = 1000
+>>> x = 500
+>>> print(x)
+500
+>>> y = x
+>>> x = 3000
+>>> print(x)
+3000
+                              </code>
+                          </pre>
+                          <p>
+                            প্রোগ্রামের বাকি অংশে কি কি হয়েছে তুমি নিশ্চই বুঝতে পেরেছো এবার।
+                          </p>
+                          <p>
+                              <b>id ( ) function:</b>
+                          </p>
+                          <p>
+                            id() ফাংশন একটু অবাক করবার মতো জিনিস। এটি একটি ইউনিক ইন্টিজার ভ্যালু প্রিন্ট করে । চলো প্রোগ্রামে দেখি এর কারিশমা।
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> a = 32
+>>> id(a)
+140731619482240
+
+                              </code>
+                          </pre>
+                          <p>
+                            প্রোগ্রামের আউটপুট দেখে মাথা ঘুরে গেল?? মাথা ঘোরার কিছু নেই। আগেই বলেছি এটা একটা ইউনিক ইন্টিজার প্রিন্ট করে। চলো এর আরো কিছু অপারেশন দেখে নেই।
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> b = 17
+>>> id(b)
+140731619481760
+                              </code>
+                          </pre>
+                          <pre>
+                              <code class="cod">
+
+>>> b = 17
+>>> id(b)
+140731619481760
+>>> b = a
+>>> id(a)
+140731619482240
+>>> a is b
+True
+                              </code>
+                          </pre>
+                          <p>
+                              <b>Augmented Assignment</b>
+                          </p>
+                          <p>
+                            চলো augmented assignment সম্পর্কে কিছু জেনে নেই। প্রোগ্রামে ফোকাস করোঃ
+                          </p>
+                          <pre>
+                              <code class="cod">
+                                  
+>>> t = 5
+>>> print(t)
+5
+>>> t += 2
+>>> print(t)
+7
+                              </code>
+                          </pre>
+                          <p>
+                            প্রোগ্রামে কিন্তু একটি বিশেষ অপারেটর += ব্যবহার করা হয়েছে। এই অপারেটরে কাজ হচ্ছে আগের ভেরিয়েবলের মানের সাথে নতুন মান যোগ করা। কিছুটা নিচের প্রোগ্রামের মতোঃ
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> t = 5
+>>> print(t)
+5
+>>> t + 2
+7
+                              </code>
+                          </pre>
+                          <p>
+                              <b>Mutable Objects</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> r = [2, 4, 6]
+>>> s = r
+>>> s
+[2, 4, 6]
+>>> s[1] = 27
+>>> s
+[2, 27, 6]
+>>> r
+[2, 27, 6]
+                              </code>
+                          </pre>
+                          <p>
+                            উপরের প্রোগ্রামে খেয়াল করো লাইন ১ এ একটি লিস্ট নেয়া হয়েছে। লাইন ২ এ একটি ভেরিয়েবল s যেখানে r এর ভ্যলু এসাইন করা হয়েছে। এরপর s এর মান জানতে চাওয়া হয়েছে অর্থাৎ r এর মান।
+                            লাইন ৫ এ ইন্ডেক্সিং করা হয়েছে। ইন্ডেক্সিং শুরু হয় ০ থেকে । যেহেতু লিস্টে ৩ টা আইটেম আছে সেহেতু ইন্ডেক্সিং হবে এরকম 
+                            [0] = 2
+                            [1] = 4
+                            [2] = 6
+                            আশা করি বুঝেছো ব্যাপার টা। লাইন ৫ এ দুই নাম্বার অর্থাৎ [1] ইনডেক্স এর মান সেট করলাম ২৭ এবং লাইন ৬ এ আবার s এর মান জানতে চাইলাম। তাই প্রিন্ট হলো, [2, 27, 6] কারণ আমরা ইন্ডেক্সিং এর মাধ্যমে মান পরিবর্তন করে দিয়েছি। 
+                          </p>
+                          <img src="../img/ind.png" alt="">
+
+
+
+                          <!-- <a href="../index.html" class="btn btn-warning">Go home</a> -->
+                          
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =============/ Writter seection /============= -->
+
+    <section class="writter mt-5 mb-5" id="writter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 wrt">
+                    <img src="../img/writter.jpg" alt="">
+                </div>
+                <div class="col-md-3 mt-3">
+                    <h5 class="">Torikus Sadik</h5>
+                    <p>Computer Programmer</p>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
