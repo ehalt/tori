@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuple</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../python/style.css">
+</head>
+<body>
+    
+    <!--============/ first section /==============  -->
+    <section class="headers" id="headbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <div class="row pt-5 pb-5">
+                <div class="col-md-12">
+                    <h1>Tuple</h1>
+                    <p>Let's learn about Tuple in detail...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="art" id="art">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pt-5">
+                    <div class="card">
+                        <div class="card-body">
+                          <p>
+                              <b>Tuple Example program:</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+>>> t = ('tori', 4.9, 3)
+>>> t
+('tori', 4.9, 3)
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                              <b>Indexing:</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> t = ('tori', 4.9, 3)
+>>> t
+('tori', 4.9, 3)
+>>> t[0]
+'tori'
+>>> t[1]
+4.9
+>>> t[2]
+3
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                              <b>Loop:</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> t = ('tori', 4.2, 3.2, 1)
+>>> for items in t:
+        print(items)
+
+        
+tori
+4.2
+3.2
+1
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                              <b>To know type:</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+                                  >>>type(t)
+                              </code>
+                          </pre>
+                          <br>
+                          <p>
+                              <b>Tuple unpacking:</b>
+                          </p>
+                          <pre>
+                              <code class="cod">
+
+>>> def minmax(items):
+return min(items), max(items)
+
+>>> minmax([83, 33, 84, 32, 85, 31, 66])
+(31, 85)
+>>> lower,upper = minmax([83, 33, 32, 85, 31, 86])
+>>> lower
+31
+>>> upper
+86
+                              </code>
+                          </pre>
+                          <br>
+                          <pre>
+                              <code class="cod">
+
+>>> def minmax(items):
+return min(items), max(items)
+
+>>> minmax([83, 33, 84, 32, 85, 31, 66])
+(31, 85)
+>>> lower,upper = minmax([83, 33, 32, 85, 31, 86])
+>>> lower
+31
+>>> upper
+86
+>>> (a, (b,(c,d))) = (4, (3, (2,1)))
+>>> a
+4
+>>> b
+3
+>>> c
+2
+>>> d
+1
+                              </code>
+                          </pre>
+                          <br>
+                          <pre>
+                              <code class="cod">
+
+>>> def minmax(items):
+return min(items), max(items)
+
+>>> minmax([83, 33, 84, 32, 85, 31, 66])
+(31, 85)
+>>> lower,upper = minmax([83, 33, 32, 85, 31, 86])
+>>> lower
+31
+>>> upper
+86
+>>> (a, (b,(c,d))) = (4, (3, (2,1)))
+>>> a
+4
+>>> b
+3
+>>> c
+2
+>>> d
+1
+>>> a = 'jelly'
+>>> b = 'bean'
+>>> a,b = b,a
+>>> a
+'bean'
+>>> b
+'jelly'
+>>> tuple([561, 104, 121, 234])
+(561, 104, 121, 234)
+>>> tuple("torikus sadik")
+('t', 'o', 'r', 'i', 'k', 'u', 's', ' ', 's', 'a', 'd', 'i', 'k')
+                              </code>
+                          </pre>
+
+                          <!-- <a href="../index.html" class="btn btn-warning">Go home</a> -->
+                          
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =============/ Writter seection /============= -->
+
+    <section class="writter mt-5 mb-5" id="writter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 wrt">
+                    <img src="../img/writter.jpg" alt="">
+                </div>
+                <div class="col-md-3 mt-3">
+                    <h5 class="">Torikus Sadik</h5>
+                    <p>Computer Programmer</p>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
